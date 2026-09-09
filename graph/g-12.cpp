@@ -11,7 +11,6 @@ private:
     visited[node] = 1;
     for (auto it : adj[node]) {
       if (!visited[it]) {
-        visited[it] = 1;
         if (dfs(adj, visited, it, node))
           return true;
       } else if (it != parent)
